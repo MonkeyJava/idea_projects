@@ -1,0 +1,362 @@
+<synth>
+  <!-- Style that all regions will use -->
+  <style id="backingStyle">
+    <!-- Make all the regions opaque-->
+    <!--<opaque value="TRUE"/>-->
+    <opaque value="FALSE"/>
+    <font name="Dialog" size="12"/>
+    <state>
+      <!-- Provide default colors -->
+      <color value="WHITE" type="BACKGROUND"/>
+      <color value="BLACK" type="FOREGROUND"/>
+    </state>
+  </style>
+
+	<style id="scrollbar_button">
+	
+		<opaque value="false"/>
+		
+		<insets top="1" left="1" bottom="1" right="1"/>
+		
+		<property key="ArrowButton.size" type="integer" value="7"/>
+		
+		<state>
+			<color value="#2c3437" type="BACKGROUND"/>
+			<color value="#2c3437" type="FOREGROUND"/>
+			<imagePainter method="ArrowButtonBackground" path="res/scrollbar_thumb.png" sourceInsets="3 3 3 3" paintCenter="true" stretch="false"/>
+			
+		</state>
+	
+	</style>
+		
+	
+	
+	<style id="frame_header">
+		
+		<imageIcon id="closeIcon" path="res/header_buttons_idle_close.png"/>
+		<imageIcon id="maximizeIcon" path="res/header_buttons_idle_maximize.png"/>
+		
+		<property key="InternalFrameTitlePane.closeIcon" value="closeIcon"/>
+		<property key="InternalFrameTitlePane.maximizeIcon" value="maximizeIcon"/>
+		
+		<opaque value="true"/>
+		
+		<insets top="2" left="2" bottom="2" right="2"/>
+		
+		<font name="Dialog" size="12" style="BOLD"/>
+		
+		<state>
+			<color value="#383e41" type="BACKGROUND"/>
+			<color value="#c3c9cb" type="FOREGROUND"/>
+			<imagePainter method="InternalFrameTitlePaneBackground" path="res/frame_header.png" sourceInsets="10 2 10 2" paintCenter="true" stretch="false"/>
+		</state>
+		
+	</style>
+	
+	
+	
+	<style id="frame_background">
+		
+		<imageIcon id="defIcon" path="res/header_buttons_idle_menu.png"/>
+		<property key="InternalFrame.icon" value="defIcon"/>
+
+		
+		<opaque value="TRUE"/>
+		
+		<insets top="1" left="1" bottom="1" right="1"/>
+		
+		<font name="Dialog" size="12"/>
+		
+		<state>
+			<color value="#a9a9a9" type="BACKGROUND"/>
+			<color value="#202020" type="FOREGROUND"/>
+			<imagePainter method="InternalFrameBackground" path="res/frame_background.png" sourceInsets="2 2 2 2" paintCenter="true" stretch="false"/>
+		</state>
+		
+	</style>
+	
+	
+	<style id="panel">
+		<opaque value="TRUE"/>
+		
+		<insets top="3" left="3" bottom="1" right="3"/>
+		
+		<state>
+			<color value="#a9a9a9" type="BACKGROUND"/>
+			<imagePainter method="PanelBackground" path="res/panel.png" sourceInsets="2 2 2 2" paintCenter="true" stretch="true"/>
+		</state>
+		
+	</style>
+	
+	
+	<style id="button">
+		
+		<opaque value="FALSE"/>
+		
+		<insets top="2" left="2" bottom="5" right="2"/>
+		
+		<font name="Dialog" size="12"/>
+		
+		<state>
+			<color value="#9d9d9d" type="BACKGROUND"/>
+			<color value="#202020" type="FOREGROUND"/>
+			<color value="#202020" type="TEXT_FOREGROUND"/>
+			<imagePainter method="buttonBackground" path="res/button_idle.png" sourceInsets="2 3 5 3" paintCenter="true" stretch="false"/>
+		</state>
+
+		<state value="MOUSE_OVER">
+			<color value="#aeaeae" type="BACKGROUND"/>
+			<color value="#202020" type="TEXT_FOREGROUND"/>
+			<imagePainter method="buttonBackground" path="res/button_highlighted.png" sourceInsets="2 3 5 3" paintCenter="true" stretch="false"/>
+		</state>
+		
+		<state value="PRESSED">
+			<color value="#9e9e9e" type="BACKGROUND"/>
+			<color value="#202020" type="TEXT_FOREGROUND"/>
+			<imagePainter method="buttonBackground" path="res/button_pressed.png" sourceInsets="2 3 5 3" paintCenter="true" stretch="false"/>
+		</state>
+		
+		<state value="DISABLED">
+			<color value="#a3a3a3" type="BACKGROUND"/>
+			<color value="#404040" type="TEXT_FOREGROUND"/>
+			<imagePainter method="buttonBackground" path="res/button_disabled.png" sourceInsets="2 3 5 3" paintCenter="true" stretch="false"/>
+		</state>
+		
+	</style>
+	
+	
+	
+	<style id="button_menu">
+		
+		<opaque value="FALSE"/>
+		
+		<insets top="2" left="2" bottom="5" right="2"/>
+		
+		<font name="Dialog" size="12"/>
+		
+		<state>
+			<color value="#a9a9a9" type="BACKGROUND"/>
+			<color value="#202020" type="FOREGROUND"/>
+			<color value="#202020" type="TEXT_FOREGROUND"/>
+			<imagePainter method="buttonBackground" path="res/button_menu_idle.png" sourceInsets="2 2 2 2" paintCenter="true" stretch="false"/>
+		</state>
+
+		<state value="MOUSE_OVER">
+			<color value="#aeaeae" type="BACKGROUND"/>
+			<color value="#202020" type="TEXT_FOREGROUND"/>
+			<imagePainter method="buttonBackground" path="res/button_menu_highlighted.png" sourceInsets="2 3 5 3" paintCenter="true" stretch="false"/>
+		</state>
+		
+		<state value="PRESSED">
+			<color value="#9e9e9e" type="BACKGROUND"/>
+			<color value="#202020" type="TEXT_FOREGROUND"/>
+			<imagePainter method="buttonBackground" path="res/button_menu_pressed.png" sourceInsets="2 3 5 3" paintCenter="true" stretch="false"/>
+		</state>
+		
+		<state value="DISABLED">
+			<color value="#a3a3a3" type="BACKGROUND"/>
+			<color value="#404040" type="TEXT_FOREGROUND"/>
+			<imagePainter method="buttonBackground" path="res/button_disabled.png" sourceInsets="2 3 5 3" paintCenter="true" stretch="false"/>
+		</state>
+		
+	</style>
+	
+
+	
+	<style id="button_toggle">
+		<opaque value="FALSE"/>
+		
+		<insets top="2" left="2" bottom="5" right="2"/>
+		
+		<font name="Dialog" size="12"/>
+		
+		<state>
+			<color value="#9b9b9b" type="BACKGROUND"/>
+			<color value="#202020" type="FOREGROUND"/>
+			<color value="#202020" type="TEXT_FOREGROUND"/>
+			<imagePainter method="ToggleButtonBackground" path="res/button_toggle_false_idle.png" sourceInsets="2 3 5 3" stretch="false"/>
+		</state>
+
+		<state value="MOUSE_OVER">
+			<color value="#b2b2b2" type="BACKGROUND"/>
+			<color value="#202020" type="FOREGROUND"/>
+			<color value="#202020" type="TEXT_FOREGROUND"/>
+			<imagePainter method="ToggleButtonBackground" path="res/button_toggle_false_highlighted.png" sourceInsets="2 3 5 3" stretch="false"/>
+		</state>
+		
+		<state value="PRESSED">
+			<color value="#939393" type="BACKGROUND"/>
+			<color value="#202020" type="FOREGROUND"/>
+			<color value="#202020" type="TEXT_FOREGROUND"/>
+			<imagePainter method="ToggleButtonBackground" path="res/button_toggle_pressed.png" sourceInsets="2 3 5 3" stretch="false"/>
+		</state>		
+		
+		<state value="SELECTED">
+			<color value="#959595" type="BACKGROUND"/>
+			<color value="#202020" type="FOREGROUND"/>
+			<color value="#202020" type="TEXT_FOREGROUND"/>
+			<imagePainter method="ToggleButtonBackground" path="res/button_toggle_true_idle.png" sourceInsets="2 3 5 3" stretch="false"/>
+		</state>
+		
+		<state value="SELECTED and MOUSE_OVER">
+			<color value="#a8a8a8" type="BACKGROUND"/>
+			<color value="#202020" type="FOREGROUND"/>
+			<color value="#202020" type="TEXT_FOREGROUND"/>
+			<imagePainter method="ToggleButtonBackground" path="res/button_toggle_true_highligted.png" sourceInsets="2 3 5 3" stretch="false"/>
+		</state>
+		
+		<state value="SELECTED and PRESSED">
+			<color value="#939393" type="BACKGROUND"/>
+			<color value="#202020" type="FOREGROUND"/>
+			<color value="#202020" type="TEXT_FOREGROUND"/>
+			<imagePainter method="ToggleButtonBackground" path="res/button_toggle_pressed.png" sourceInsets="2 3 5 3" stretch="false"/>
+		</state>
+		
+		<state value="DISABLED">
+			<color value="#a3a3a3" type="BACKGROUND"/>
+			<color value="#404040" type="TEXT_FOREGROUND"/>
+			<imagePainter method="ToggleButtonBackground" path="res/button_disabled.png" sourceInsets="2 3 5 3" stretch="false"/>
+		</state>
+	</style>
+	
+
+	
+	<style id="scrollbar">
+		
+		<opaque value="false"/>
+		
+		<!--
+		<color value="#000000" type="BACKGROUND"/>
+		<color value="#b3c0e6" type="FOREGROUND"/>
+		-->
+		
+		<property key="ScrollBar.squareButtons" type="boolean" value="true"/>
+		<property key="ScrollBar.thumbHeight" type="integer" value="7"/>
+		
+	</style>
+	
+	
+	<style id="scrollbar_thumb">
+		
+		<opaque value="false"/>
+		
+		<insets top="0" left="1" bottom="0" right="1"/>
+		
+		<state>
+			<color value="#2c3437" type="BACKGROUND"/>
+			<imagePainter method="ScrollBarThumbBackground" path="res/scrollbar_thumb.png" sourceInsets="4 3 4 3" stretch="true"/>
+		</state>
+		
+	</style>
+	
+
+	<style id="tabbedpane_tab">
+		
+		<opaque value="false"/>
+		
+		<insets top="2" left="16" bottom="1" right="16"/>
+		
+		<font name="Dialog" size="12"/>
+		
+		<state>
+			<color value="#8c8c8c" type="BACKGROUND"/>
+			<color value="#202020" type="FOREGROUND"/>
+			<color value="#202020" type="TEXT_FOREGROUND"/>
+			<imagePainter method="TabbedPaneTabBackground" path="res/tabbedpane_tab_false_idle.png" sourceInsets="5 5 1 5" paintCenter="true" stretch="false"/>
+		</state>
+		
+		<state value="MOUSE_OVER">
+			<color value="#b5b5b5" type="BACKGROUND"/>
+			<color value="#202020" type="FOREGROUND"/>
+			<color value="#202020" type="TEXT_FOREGROUND"/>
+			
+			<imagePainter method="TabbedPaneTabBackground" path="res/tabbedpane_tab_false_highlighted.png" sourceInsets="5 5 1 5" paintCenter="true" stretch="false"/>
+		</state>
+		
+		<state value="SELECTED">
+			<color value="#a9a9a9" type="BACKGROUND"/>
+			<color value="#202020" type="FOREGROUND"/>
+			<color value="#202020" type="TEXT_FOREGROUND"/>
+			
+			<font name="Dialog" size="12" style="BOLD"/>
+			
+			<imagePainter method="TabbedPaneTabBackground" path="res/tabbedpane_tab_true_idle.png" sourceInsets="10 5 10 5" paintCenter="true" stretch="false"/>
+		</state>
+		
+		<state value="SELECTED and MOUSE_OVER">
+			<color value="#a9a9a9" type="BACKGROUND"/>
+			<color value="#202020" type="FOREGROUND"/>
+			<color value="#202020" type="TEXT_FOREGROUND"/>
+			
+			<font name="Dialog" size="12" style="BOLD"/>
+			
+			<imagePainter method="TabbedPaneTabBackground" path="res/tabbedpane_tab_true_highlighted.png" sourceInsets="10 5 10 5" paintCenter="true" stretch="false"/>
+		</state>
+		
+	</style>
+	
+
+	<style id="text_field">
+		
+		<insets top="10" left="10" bottom="10" right="10"/>
+		
+		<opaque value="true"/>
+		
+		<font name="Monospaced" size="20"/>
+		
+		<state>
+			<color value="#2c3437" type="BACKGROUND"/>
+			<color value="#f0f0f0" type="TEXT_BACKGROUND"/>
+			<color value="#b0b0b0" type="TEXT_FOREGROUND"/>
+			<color value="#202020" type="FOREGROUND"/>
+			<imagePainter method="textAreaBackground" path="res/text_field.png" sourceInsets="6 2 6 2" paintCenter="true" stretch="false"/>
+		</state>
+		
+	</style>
+	
+	
+	<style id="progressbar">
+
+		<state>
+			<color value="#000000" type="BACKGROUND"/>
+			<color value="#b3c0e6" type="FOREGROUND"/>
+			<!--
+			<color value="#000000" type="TEXT_BACKGROUND"/>
+			<color value="#b3c0e6" type="TEXT_FOREGROUND"/>
+			<color value="#00c0e6" type="FOCUS"/>
+			-->
+			
+			<imagePainter method="progressBarBackground" path="res/button_toggle_pressed.png" sourceInsets="2 3 5 3" paintCenter="true" stretch="true"/>
+			<imagePainter method="progressBarForeground" path="res/button_toggle_false_idle.png" sourceInsets="2 3 5 3" paintCenter="true" stretch="true"/>
+		</state>
+	</style>
+
+
+
+	<bind style="button" type="region" key="Button"/>
+		
+	<bind style="button_menu" type="name" key="jbMenu"/>
+
+	<bind style="frame_header" type="region" key="InternalFrameTitlePane"/>
+
+	<bind style="frame_background" type="region" key="InternalFrame"/>
+
+	<bind style="scrollbar" type="region" key="ScrollBar"/>
+
+	<bind style="scrollbar_thumb" type="region" key="ScrollBarThumb"/>
+
+	<bind style="scrollbar_button" type="region" key="ArrowButton"/>
+
+	<bind style="tabbedpane_tab" type="region" key="TabbedPaneTab"/>
+
+	<bind style="text_field" type="region" key="textArea"/>
+
+	<bind style="panel" type="name" key="jpControls"/>
+
+	<bind style="button_toggle" type="name" key="jtbPause"/>
+
+	<bind style="panel" type="name" key="jpCompile"/>
+
+	<bind style="progressbar" type="region" key="ProgressBar"/>
+
+</synth>
