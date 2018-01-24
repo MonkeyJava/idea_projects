@@ -13,7 +13,7 @@ public class MyShape {
         list.add(new Square());
         list.add(new Shape());
         for (Shape s : list){
-            System.out.println(s.draw());
+            System.out.println("Hello i`m: " + s.draw());
         }
 
     }
